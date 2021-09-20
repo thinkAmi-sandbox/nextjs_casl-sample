@@ -10,10 +10,10 @@ const authenticate = credentials =>
 const options = {
   providers: [
     Providers.Credentials({
-      name: "Name",
+      name: 'Name',
       credentials: {
-        name: { label: "Name", type: "text", placeholder: "admin" },
-        password: { label: "Password", type: "password" },
+        name: { label: 'Name', type: 'text', placeholder: 'admin' },
+        password: { label: 'Password', type: 'password' },
       },
       authorize: async credentials => {
         const user = authenticate(credentials)

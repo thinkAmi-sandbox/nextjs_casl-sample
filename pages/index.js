@@ -1,7 +1,8 @@
-import { signIn, signOut, useSession } from 'next-auth/client'
+import {signIn, signOut, useSession} from 'next-auth/client'
+import Link from 'next/link'
 
 export default function Home() {
-  const [ session, loading ] = useSession()
+  const [session, loading] = useSession();
 
   if (loading) {
     return <div>Loading...</div>
@@ -21,6 +22,10 @@ export default function Home() {
           <button onClick={signIn}>Sign in</button>
         </>
       )}
+
+      <Link href="/todo/1">
+        <a>Go Todo</a>
+      </Link>
     </div>
   )
 }
